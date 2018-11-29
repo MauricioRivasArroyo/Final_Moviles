@@ -2,7 +2,7 @@
 //  Article.swift
 //  iCatchUp
 //
-//  Created by Operador on 10/22/18.
+//  Created by Developer on 10/19/18.
 //  Copyright © 2018 UPC. All rights reserved.
 //
 
@@ -18,3 +18,4 @@ struct Article: Codable {
     var publishedAt: String?
     var content: String?
 }
+

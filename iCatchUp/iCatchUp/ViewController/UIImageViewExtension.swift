@@ -2,7 +2,7 @@
 //  UIImageViewExtension.swift
 //  iCatchUp
 //
-//  Created by Operador on 10/22/18.
+//  Created by Developer on 10/19/18.
 //  Copyright © 2018 UPC. All rights reserved.
 //
 
@@ -11,25 +11,28 @@ import UIKit
 import os
 
 extension UIImageView {
-    func setImage(fromNamedAsset name: String) {
-        self.image = UIImage(named: name)
+    func setImage(fromAsset assetName: String?) {
+        if let name = assetName {
+            DispatchQueue.main.async {
+                self.image = UIImage(named: name)
+            }
+        }
     }
     
-    func setImage(fromUrlString urlString: String,
-                  withDefaultNamed defaultName: String?,
-                  withErrorNamed errorName: String?) {
+    func log(_ message: String) {
+        os_log("%@", message)
+    }
+    
+    func setImage(
+        fromUrlString urlString: String,
+        withDefaultImage defaultImage: String?,
+        withErrorImage errorImage: String?) {
+        self.setImage(fromAsset: defaultImage)
         guard let url = URL(string: urlString) else {
-            let message = "Incorrect URL String"
-            os_log("%@", message)
-            if let name = defaultName {
-                DispatchQueue.main.async {
-                    self.setImage(fromNamedAsset: name)
-                }
-            }
+            self.log("Error while building URL, default image assigned")
             return
         }
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard
                 let urlResponse = response as? HTTPURLResponse,
                 urlResponse.statusCode == 200,
@@ -38,13 +41,7 @@ extension UIImageView {
                 let data = data,
                 error == nil,
                 let image = UIImage(data: data) else {
-                    let message = "Error while downloading Image"
-                    os_log("%@", message)
-                    if let name = errorName {
-                        DispatchQueue.main.async {
-                            self.setImage(fromNamedAsset: name)
-                        }
-                    }
+                    self.log("Error while requesting Image, error image assigned: \(error?.localizedDescription ?? "Error")")
                     return
                 }
             DispatchQueue.main.async {
@@ -53,3 +50,4 @@ extension UIImageView {
         }.resume()
     }
 }
+

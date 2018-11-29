@@ -2,15 +2,15 @@
 //  Source.swift
 //  iCatchUp
 //
-//  Created by Operador on 10/22/18.
+//  Created by Developer on 10/19/18.
 //  Copyright © 2018 UPC. All rights reserved.
 //
 
 import Foundation
 
 struct Source: Codable {
-    var id: String
-    var name: String
+    var id: String?
+    var name: String?
     var description: String?
     var url: String?
     var category: String?
@@ -18,10 +18,16 @@ struct Source: Codable {
     var country: String?
     
     var urlToLogo: String {
-        return LogoApi.urlToLogo(forSource: self)
+        return LogoApi.urlToLogo(fromSource: self)
     }
     
     var isFavorite: Bool {
-        return FavoritesStore.shared.isFavorite(source: self)
+        get {
+            return CatchUpStore.shared.isFavorite(source: self)
+        }
+        set {
+            CatchUpStore.shared.setFavorite(newValue, for: self)
+        }
     }
 }
+

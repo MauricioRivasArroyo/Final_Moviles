@@ -2,23 +2,23 @@
 //  SettingsViewController.swift
 //  iCatchUp
 //
-//  Created by Operador on 10/22/18.
+//  Created by Developer on 10/19/18.
 //  Copyright © 2018 UPC. All rights reserved.
 //
 
 import UIKit
 
 class SettingsViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+
+    @IBOutlet weak var showOnBoardingSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // test Extension
-        let urlString = "https://images.pexels.com/photos/58625/pexels-photo-58625.jpeg?cs=srgb&dl=apple-buildings-camera-58625.jpg&fm=jpg"
-        imageView.setImage(fromUrlString: urlString,
-                           withDefaultNamed: "no-image-available",
-                           withErrorNamed: "incorrect-image")
-        
+        showOnBoardingSwitch.setOn(SettingsStore.shared.shouldShowOnboarding, animated: true)
+       
     }
 
+    @IBAction func showOnboardingValueChanged(_ sender: UISwitch) {
+        SettingsStore.shared.shouldShowOnboarding = sender.isOn
+    }
 }

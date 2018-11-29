@@ -2,25 +2,30 @@
 //  ArticleCell.swift
 //  iCatchUp
 //
-//  Created by Operador on 10/29/18.
+//  Created by Developer on 10/26/18.
 //  Copyright © 2018 UPC. All rights reserved.
 //
 
 import UIKit
 
 class ArticleCell: UICollectionViewCell {
-    @IBOutlet weak var pictureImageView: UIImageView!
-    
+
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var pictureImageView: UIImageView!
+    var article: Article?
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
     func update(from article: Article) {
-        if let urlToImage = article.urlToImage {
-        pictureImageView.setImage(
-            fromUrlString: urlToImage,
-            withDefaultNamed: "no-image-available",
-            withErrorNamed: "no-image-available")
-        
+        self.article = article
+        if let urlString = article.urlToImage {
+            self.pictureImageView.setImage(
+                fromUrlString: urlString,
+                withDefaultImage: "no-image-available",
+                withErrorImage: "no-image-available")
         }
-        titleLabel.text = article.title
+        self.titleLabel.text = article.title
     }
 }

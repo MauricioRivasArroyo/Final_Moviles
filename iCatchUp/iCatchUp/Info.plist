@@ -35,6 +35,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -45,5 +46,7 @@
 	</array>
 	<key>NewsApiKey</key>
 	<string>fecf4feeffa64e4da682e7d268612ce5</string>
+	<key>DidShowOnboarding</key>
+	<false/>
 </dict>
 </plist>
