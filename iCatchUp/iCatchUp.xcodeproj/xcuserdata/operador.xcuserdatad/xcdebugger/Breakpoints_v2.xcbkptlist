@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iCatchUp/ViewController/SourceViewController.swift"
+            timestampString = "563112729.537122"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "SourceViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iCatchUp.SourceViewController.logoImageView.getter : weak Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "iCatchUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/operador/Development/wx71/iCatchUp/iCatchUp/ViewController/SourceViewController.swift"
+                  timestampString = "562873501.924149"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iCatchUp.SourceViewController.logoImageView.setter : weak Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "iCatchUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/operador/Development/wx71/iCatchUp/iCatchUp/ViewController/SourceViewController.swift"
+                  timestampString = "562873501.9280061"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iCatchUp.SourceViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; iCatchUp.SourceViewController"
+                  moduleName = "iCatchUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/operador/Development/wx71/iCatchUp/iCatchUp/ViewController/SourceViewController.swift"
+                  timestampString = "562873501.930737"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iCatchUp.SourceViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;iCatchUp.SourceViewController&gt;"
+                  moduleName = "iCatchUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/operador/Development/wx71/iCatchUp/iCatchUp/ViewController/SourceViewController.swift"
+                  timestampString = "562873501.932461"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
